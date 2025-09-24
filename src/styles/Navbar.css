@@ -1,0 +1,207 @@
+:root {
+  --bg-color: #0a1f44; /* dark blue */
+  --primary-color: #FFD700; /* yellow */
+  --text-color: #ffffff;
+}
+
+/* Navbar container */
+.navbar {
+  background-color: var(--bg-color);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar-logo {
+  font-family: 'DM Serif Text', serif;
+  font-size: 2rem;
+  color: var(--primary-color);
+  font-style: italic;
+  align-self: start;
+  cursor: pointer; /* pointer cursor */
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  font-weight: bold;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+  cursor: pointer; /* pointer cursor */
+}
+
+.navbar-links li a:hover {
+  color: var(--primary-color);
+}
+
+/* Resume buttons */
+
+/* Desktop button */
+.resume-btn {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: inline-block; /* visible by default */
+  cursor: pointer; /* pointer cursor */
+}
+
+.resume-btn:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+/* Mobile dropdown button (inside li) */
+.resume-mobile {
+  display: none; /* hidden on desktop */
+  cursor: pointer; /* pointer cursor */
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer; /* pointer cursor */
+  gap: 5px;
+  height: 30px;
+}
+
+.hamburger span {
+  width: 20px;
+  height: 1px;
+  background-color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  /* Hide desktop resume button */
+  .resume-btn {
+    display: none;
+  }
+
+  /* Show mobile resume in dropdown */
+  .resume-mobile {
+    display: block;
+    width: 100%;
+  }
+
+  .resume-mobile a {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    cursor: pointer; /* pointer cursor */
+  }
+
+  .resume-mobile a:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+  }
+
+  /* Mobile dropdown */
+  .navbar-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: var(--bg-color);
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    z-index: 1;
+    padding: 0 1rem;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    text-decoration: none;
+  }
+
+  .navbar-links.active {
+    max-height: 500px;
+    padding: 1rem 1rem;
+  }
+
+  .navbar-links li {
+    margin: 0.5rem 0;
+    width: 100%;
+  }
+
+  .navbar-links li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.7rem 1rem;
+    border-radius: 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer; /* pointer cursor */
+  }
+
+  .navbar-links li a:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+  }
+
+  /* Hamburger menu */
+  .hamburger {
+    display: flex;
+    height: 30px; /* taller for better touch */
+    justify-content: space-between;
+  }
+
+  .hamburger span {
+    height: 5px; /* thicker bars */
+  }
+}
+
+/* Desktop: reset visibility */
+@media (min-width: 769px) {
+  .resume-mobile {
+    display: none;
+  }
+
+  .resume-btn {
+    display: inline-block;
+  }
+}

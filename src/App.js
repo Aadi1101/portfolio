@@ -1,24 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Navbar from "./components/Navbar";
+import Hero from "./sections/Hero";
+import AboutMe from "./sections/AboutMe";
+import TechStack from "./sections/TechStack";
+import Experience from "./sections/Experience";
+import Projects from "./sections/Projects";
+import CaseStudies from "./sections/CaseStudies";
+import Contact from "./sections/Contact";
+import Footer from "./components/Footer";
+import AllProjects from "./sections/AllProjects";
+import AllCaseStudies from "./sections/AllCaseStudies";
+import Research from "./sections/Research";
+// import Testimonials from "./sections/Testimonials";
+
+import "./styles/globals.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        {/* Main Portfolio Page */}
+        <Route
+          path="/"
+          element={
+            <>
+              <Hero />
+              <TechStack />
+              <AboutMe />
+              <Experience />
+              <Projects />
+              <CaseStudies />
+              <Research />
+              {/* <Testimonials /> */}
+              <Contact />
+              <Footer />
+            </>
+          }
+        />
+
+        {/* Dedicated Pages */}
+        <Route path="/projects" element={<AllProjects />} />
+        <Route path="/casestudies" element={<AllCaseStudies />} />
+      </Routes>
+    </Router>
   );
 }
 

@@ -1,0 +1,87 @@
+.about-section {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 1rem 2rem;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.about-title {
+  font-family: 'DM Serif Text', serif;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.about-text {
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.about-text .highlight {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.about-highlights {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.highlight-card {
+  background-color: rgba(255, 215, 0, 0.08);
+  border: 2px solid var(--primary-color);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.highlight-card:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 8px 15px rgba(255, 215, 0, 0.35);
+  /* border-color: #fff; */
+}
+
+.highlight-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.highlight-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: var(--primary-color);
+}
+
+.highlight-card p {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  font-weight: bold;
+}
+/* Mobile view */
+@media (max-width: 768px) {
+  .about-text {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+  }
+
+  .about-highlights {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .highlight-card {
+    width: 90%;
+  }
+}

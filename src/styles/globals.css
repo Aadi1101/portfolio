@@ -1,0 +1,33 @@
+/* Global styles */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100..900&display=swap');
+
+:root {
+  --bg-color: #0a0f2c;
+  --primary-color: #FFD700;
+  --text-color: #ffffff;
+  --font-main: 'Poppins', sans-serif;
+  --font-alt: 'Outfit', sans-serif;
+  --font-heading: 'DM Serif Text', serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-main);
+}
+
+/* Wave Separator */
+.wave-separator {
+  width: 100%;
+  overflow: visible;
+  line-height: 0;
+  margin-top: -5px; /* slightly overlap with Hero section */
+}
+
+.wave-separator svg {
+  display: block;
+  width: 100%;
+  height: 150px;
+}

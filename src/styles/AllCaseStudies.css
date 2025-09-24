@@ -1,0 +1,126 @@
+.all-case-studies-section {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 5rem 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.all-case-studies-title {
+  font-family: 'DM Serif Text', serif;
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--primary-color);
+}
+
+/* Filter Buttons */
+.filter-buttons {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.4rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
+
+.case-studies-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* one column layout */
+  gap: 2.5rem;
+}
+
+.case-study-card {
+  background-color: rgba(255, 215, 0, 0.08);
+  border: 2px solid var(--primary-color);
+  border-radius: 12px;
+  padding: 2rem;
+  width: 99%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.case-study-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 15px rgba(255, 215, 0, 0.35);
+}
+
+.title-and-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+
+.case-study-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.case-study-link {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  transition: color 0.3s ease;
+}
+
+.case-study-link:hover {
+  color: #fff;
+}
+
+.case-study-content p {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: bold;
+}
+
+.highlight {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.tech-tag {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: bolder;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .case-study-card {
+    padding: 1.5rem;
+  }
+
+  .case-study-title {
+    font-size: 1.2rem;
+  }
+
+  .case-study-link {
+    font-size: 1.5rem;
+  }
+}

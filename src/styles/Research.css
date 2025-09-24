@@ -1,0 +1,119 @@
+.research-section {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 1rem 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.research-title {
+  font-family: 'DM Serif Text', serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+.research-intro {
+  max-width: 850px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.research-intro span {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+  font-weight: bold;
+}
+
+.research-card {
+  background-color: rgba(255, 215, 0, 0.08);
+  border: 2px solid var(--primary-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.research-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(255, 215, 0, 0.3);
+}
+
+.research-card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 0.6rem;
+}
+
+.research-card span{
+    color: gold;
+}
+
+.research-card-description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
+}
+
+.research-card-motivation {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  background-color: rgba(255, 215, 0, 0.05);
+  border-left: 3px solid var(--primary-color);
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+}
+
+.research-future {
+  max-width: 800px;
+  margin: 2rem auto 0;
+  padding: 1.5rem;
+  background-color: rgba(255, 215, 0, 0.08);
+  border: 2px solid var(--primary-color);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.research-future h4 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: var(--primary-color);
+}
+
+.research-future p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.research-future span {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .research-intro {
+    font-size: 1rem;
+  }
+
+  .research-card-title {
+    font-size: 1.2rem;
+  }
+
+  .research-card-description,
+  .research-card-motivation,
+  .research-future p {
+    font-size: 0.9rem;
+  }
+}
