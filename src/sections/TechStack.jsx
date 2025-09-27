@@ -4,6 +4,7 @@ import "../styles/TechStack.css";
 import { FaPython, FaNodeJs, FaJs, FaCubes, FaDatabase, FaNetworkWired, FaSearchengin, FaCogs, FaCompressArrowsAlt, FaRocket, FaJsSquare } from "react-icons/fa";
 import { SiFlask, SiFastapi, SiKeras, SiTensorflow, SiPytorch, SiHuggingface, SiLangchain, SiPostgresql, SiMongodb, SiFirebase, SiDocker, SiGithubactions, SiGooglegemini, SiOpenai, SiAmazonwebservices, SiAmazoncloudwatch, SiJavascript } from "react-icons/si";
 import { BsCloud, BsFileCheck } from "react-icons/bs";
+import {Ollama} from '@lobehub/icons';
 
 function TechStack() {
   const skills = [
@@ -23,9 +24,9 @@ function TechStack() {
         { name: "Keras", icon: <SiKeras /> },
         { name: "TensorFlow", icon: <SiTensorflow /> },
         { name: "PyTorch", icon: <SiPytorch /> },
-        { name: "HuggingFace", icon: <SiHuggingface /> },
+        { name: "HF Hub", icon: <SiHuggingface /> },
         { name: "LangChain", icon: <SiLangchain /> },
-        { name: "Transformers", icon: <SiHuggingface /> }, // reused
+        { name: "Ollama Models", icon: <Ollama /> }, // reused
       ],
     },
     {
@@ -79,8 +80,8 @@ function TechStack() {
     {
       category: "Optimization",
       items: [
-        { name: "Fine-tuning (LoRA, QLoRA)", icon: <FaCogs /> },
-        { name: "Quantization (GPTQ, BitsAndBytes)", icon: <FaCompressArrowsAlt /> },
+        { name: "Fine-tuning", icon: <FaCogs /> },
+        { name: "Quantization", icon: <FaCompressArrowsAlt /> },
         { name: "Inference Acceleration", icon: <FaRocket /> },
       ],
     },
